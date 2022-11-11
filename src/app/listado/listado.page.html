@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listado</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let persona of personas">
+    <ion-avatar slot="start">
+      <img [src]="persona.foto" />
+    </ion-avatar>
+    <ion-label>{{persona.nombre}}</ion-label>
+  </ion-item>
+</ion-content>

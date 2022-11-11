@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Matematica</ion-label>
+        </ion-item>
+        <div  class="ion-padding" slot="content">
+          <ion-button  expand="full" (click)="starscan()" color="dark">
+            Escanear
+           </ion-button>
+           <ion-button  expand="full"  color="dark">
+            Lista de estudiantes 
+           </ion-button>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label>Lenguaje</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ion-button  expand="full" (click)="starscan()" color="dark">
+            Escanear
+           </ion-button>
+           <ion-button  expand="full"  href="lista"  color="dark">
+            Lista de estudiantes 
+           </ion-button>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label>Ingles</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ion-button  expand="full" (click)="starscan()" color="dark">
+            Escanear
+           </ion-button>
+           <ion-button  expand="full"  color="dark">
+            Lista de estudiantes 
+           </ion-button>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  <ion-button expand="full" (click)="reset()" color="warning" *ngIf="scanResult">
+    <ion-icon slot="start" name="refresh"></ion-icon>
+    Resetear
+   </ion-button>
+  <video #video [hidden]="!scanActive" width="100%"></video>
+  <canvas #canvas hidden></canvas>
+  <ion-button expand="full" (click)="stopscan()" color="warning" *ngIf="scanActive">
+    <ion-icon slot="start" name="close"></ion-icon>
+    Parar Camara
+   </ion-button>
+   <ion-card *ngIf="scanResult">
+    <ion-card-header>
+      <ion-card-title>Codigo QR</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ scanResult }}
+    </ion-card-content>
+   </ion-card>
+  
+  </ion-content>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button [routerLink]="['/home']"><ion-icon name="exit-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>

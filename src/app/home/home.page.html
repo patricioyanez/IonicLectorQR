@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Duoc UC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> <!-- IOS -->
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Duoc UC</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h3>Opciones de Usuario</h3>
+    <br>
+    <ion-button [routerLink]="['/eregistro']" color="danger">
+      <ion-icon name="person-add-outline"></ion-icon>
+     registro
+    </ion-button>
+
+    <ion-button [routerLink]="['/einicios']" color="danger">
+      <ion-icon name="person-circle-outline"></ion-icon>
+     Inicio de Sesion
+    </ion-button>
+  </div>
+</ion-content>

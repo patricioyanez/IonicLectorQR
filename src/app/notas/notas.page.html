@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12">Ingrese notas a promediar</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"><<ion-input type="number" placeholder="Nota1"></ion-input></ion-col>
+    <ion-col size="4"><<ion-input type="number" placeholder="Nota2"></ion-input></ion-col>
+    <ion-col size="4"><<ion-input type="number" placeholder="Nota3"></ion-input></ion-col>
+  </ion-row>
+  <<ion-row>
+    <ion-col size="12">Ponderacion</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"><<ion-input type="number" placeholder="Pon1"></ion-input></ion-col>
+    <ion-col size="4"><<ion-input type="number" placeholder="Pon2"></ion-input></ion-col>
+    <ion-col size="4"><<ion-input type="number" placeholder="Pon3"></ion-input></ion-col>
+  </ion-row>
+  <<ion-button (click)="calcular (nota1, nota 2, nota3, pon1, pon2, pon3)">
+    <<ion-icon slot="icon-only" name="calculator-outline"></ion-icon>
+    promediar
+  </ion-button>
+  <div *ngIf ="resultado;">
+    <ion-text color="primary">
+      <h1 class="ion-text-center">su promedio es  {{ promedio | number:'1.0-1' }}</h1>
+    </ion-text>
+    <div *ngIf="promedio >=40; else mensajeReprobado">
+      <<ion-text color="danger">
+        <h1 class="ion-text-center">Ute aprobo. Tira'o ek ramo</h1>
+      </ion-text>
+    </div>
+    <ng
+  </div> 
+
+</ion-content>

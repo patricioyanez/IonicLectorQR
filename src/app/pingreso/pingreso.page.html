@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-button [routerLink]="['/codigoqr']" color="warning">
+      <ion-icon name="qr-code-outline"></ion-icon>
+      QR DE LISTA
+    </ion-button>
+  <br>
+  <br>
+  <ion-button [routerLink]="['/listado']" color="warning">
+    <ion-icon name="reorder-four-outline"></ion-icon>
+    Listado de Alumnos
+  </ion-button>
+  </div>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button [routerLink]="['/home']"><ion-icon name="exit-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
+

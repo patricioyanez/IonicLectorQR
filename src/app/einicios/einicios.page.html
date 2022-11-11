@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar sesion como</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content>
+  <div id="container">
+  <ion-button [routerLink]="['/pinicio']" color="danger">
+    <ion-icon slot="icon-only" name="people-outline"></ion-icon>
+    profesor
+  </ion-button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <ion-button [routerLink]="['/ainico']" color="danger">
+    <ion-icon slot="icon-only" name="people-outline"></ion-icon>
+    Alumno 
+  </ion-button> 
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button [routerLink]="['/home']"><ion-icon name="arrow-back-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

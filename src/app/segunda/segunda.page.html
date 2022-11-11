@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-button>
+    <ion-title>Votaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="botonApruebo()" color="success">
+        <ion-icon name="checkmark-outline"></ion-icon>
+        Apruebo
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="botonRechazo()" color="danger">
+        <ion-icon name="close-outline"></ion-icon>
+        Rechazo
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-button (click)="botonOtro()" color="warning" expand="block" shape="round">
+    <ion-icon name="square-outline"></ion-icon>
+    Nulo o Blanco
+  </ion-button>
+
+  <h3>{{ apruebo }}</h3>
+  <h3>{{ rechazo }}</h3>
+  <h3>{{ otro }}</h3>
+<ion-row>
+  <ion-col size="6">nulo/blanco</ion-col>
+  <ion-col size="6">:{{ otro }}</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="6">total votos</ion-col>
+  <ion-col size="6">:{{ apruebo+rechazo+otro }}</ion-col>
+</ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Resultados</ion-title>
+  </ion-toolbar>
+</ion-footer>

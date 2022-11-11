@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio de Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input #nombre></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="floating">Contraseña</ion-label>
+    <ion-input #apellido></ion-input>
+  </ion-item> 
+  <br> 
+  <br>
+<div id="container">
+<ion-button [routerLink]="['/olvidar']" size="small">
+  <ion-icon name="lock-closed-outline"></ion-icon>
+  Olvidaste tu contraseña?
+  </ion-button>
+  <br> 
+  <br>
+<ion-button [routerLink]="['/pingreso']" size="small">
+  <ion-icon name="enter-outline"></ion-icon>
+  Iniciar sesion
+  </ion-button>
+</div>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button [routerLink]="['/pregistro']"><ion-icon name="person-add-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button [routerLink]="['/einicios']"><ion-icon name="arrow-back-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,14 @@
+Crear una pagina que permita promediar 3 notas con sus ponderaciones y 
+obtener nota minima a obtener en examen.
+Señalar la sitación final del alumno.
+
+
+Usar los componentes necesarios para cumplir con los requerimientos
+
+Toast
+Alert
+fab
+button
+input
+link
+etc..
